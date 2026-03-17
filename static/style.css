@@ -1,0 +1,99 @@
+/* Configurações gerais da página */
+body {
+    background-color: #BCDFFA; /* Define a cor de fundo azul claro que você escolheu */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e legível */
+    margin: 0;                 /* Remove margens padrão do navegador */
+    padding: 20px;             /* Adiciona um espaçamento nas bordas da tela */
+    color: #333;               /* Cor do texto principal (cinza escuro para contraste) */
+    text-align: center;        /* Centraliza títulos, textos e formulários */
+}
+
+/* Estilização do Título Principal */
+.titulo-principal {
+    color: #0056b3;            /* Azul mais escuro para destacar o título */
+    text-transform: uppercase; /* Deixa o texto todo em maiúsculo */
+    letter-spacing: 2px;       /* Aumenta o espaço entre as letras */
+}
+
+/* Estilização do Formulário de Busca */
+form {
+    margin-bottom: 30px;       /* Espaço entre a busca e os cards de bandeiras */
+}
+
+input {
+    padding: 10px;             /* Espaço interno para o texto não encostar na borda */
+    border-radius: 5px;        /* Arredonda as quinas do campo de digitação */
+    border: 1px solid #ccc;    /* Borda cinza clara e fina */
+    width: 250px;              /* Define uma largura fixa para o campo */
+}
+
+button {
+    padding: 10px 20px;        /* Espaço interno (mais largo que alto) */
+    border-radius: 5px;        /* Arredonda as quinas do botão */
+    border: none;              /* Remove a borda padrão */
+    background-color: #0056b3; /* Cor de fundo azul escuro */
+    color: white;              /* Cor do texto do botão */
+    cursor: pointer;           /* Muda o cursor para "mãozinha" ao passar o mouse */
+}
+
+/* A Grade de Cards (Container) */
+/* Centraliza o container inteiro e o que estiver dentro dele */
+.container-flags {
+    display: flex;             /* Mudamos de 'grid' para 'flex' */
+    flex-direction: column;    /* Alinha os itens em coluna (um abaixo do outro) */
+    align-items: center;       /* Centraliza os itens horizontalmente */
+    justify-content: center;   /* Centraliza verticalmente se necessário */
+    gap: 25px;                 /* Mantém o espaço entre os cards */
+    width: 100%;               /* Garante que o container ocupe a largura toda */
+    margin-top: 20px;          /* Dá um espaço extra abaixo da barra de busca */
+}
+
+/* Ajuste no Card para ele não ficar gigante na tela toda */
+.card-flag {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    
+    /* DEFINA UMA LARGURA MÁXIMA */
+    width: 300px;              /* Isso impede que o card estique na tela toda */
+    margin: 0 auto;            /* Reforça a centralização */
+}
+
+.card-flag:hover {
+    transform: translateY(-5px); /* Faz o card "subir" levemente ao passar o mouse */
+}
+
+/* Estilização da Bandeira (Imagem) */
+.card-flag img {
+    width: 100%;               /* A imagem ocupa toda a largura do card */
+    height: 150px;             /* Altura fixa para todos os cards ficarem iguais */
+    object-fit: cover;         /* Corta a imagem para preencher o espaço sem esticar */
+    border-radius: 8px;        /* Arredonda as quinas da bandeira */
+    border: 1px solid #eee;    /* Coloca uma bordinha bem clara na imagem */
+}
+
+/* Estilização dos textos dentro do card */
+.card-flag h3 {
+    margin: 15px 0 5px 0;      /* Ajusta os espaços acima e abaixo do nome */
+    font-size: 1.2rem;         /* Tamanho da fonte do nome do país */
+}
+
+.card-flag p {
+    font-size: 0.9rem;         /* Texto um pouco menor para informações secundárias */
+    margin: 5px 0;             /* Espaço entre as linhas de texto */
+    color: #666;               /* Cinza para capital e língua */
+}
+
+/* Estilização do Botão de Mapa */
+.mapa {
+    margin-top: 15px;          /* Espaço acima do botão */
+    background-color: #28a745; /* Verde para destacar a ação de "ir para o mapa" */
+    width: 100%;               /* Faz o botão ocupar a largura toda do card */
+    font-weight: bold;         /* Deixa o texto em negrito */
+}
+
+.mapa:hover {
+    background-color: #218838; /* Escurece o verde quando passa o mouse */
+}

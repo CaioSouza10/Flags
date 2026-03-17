@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAGS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="titulo-principal">BANDEIRAS PELO MUNDO</h1>
+    <p>Olá, {{nome_usuario}}</p>
+    <form action="/buscar" method="POST">
+        <input name="país"></input>
+        <button type="submit">Pesquisar</button>
+    </form>
+    <div class="container-flags">
+        {% for pais in all_paises %}
+        <div class="card-flag">
+            <img src="{{ pais.flags.png }}" alt="Bandeira">
+            <h3>{{ pais.name.common }}</h3>
+            <p>Capital: {{ pais.capital[0] if pais.capital else 'Não possui' }}</p>
+            <p>Língua: {{ pais.languages.values() | join(', ') if pais.languages else 'N/A' }}</p>
+            <a href="{{ pais.maps.googleMaps }}" target="_blank">
+            <button class="mapa">Ver no mapa</button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
